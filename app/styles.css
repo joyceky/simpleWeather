@@ -1,0 +1,16 @@
+#nav {
+	height: 40px;
+}
+
+.overview {
+	height: 220px;
+}
+
+.hourly {
+	height: 180px;
+}
+
+.weatherIcon {
+	height: 100px;
+	width: 100px;
+}

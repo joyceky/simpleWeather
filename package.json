@@ -1,0 +1,22 @@
+{
+  "name": "simpleweather",
+  "version": "1.0.0",
+  "description": "An app to get the local weather",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joyceky/simpleWeather.git"
+  },
+  "author": "Kyle Joyce",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joyceky/simpleWeather/issues"
+  },
+  "homepage": "https://github.com/joyceky/simpleWeather#readme",
+  "dependencies": {
+    "express": "^4.4.3"
+  }
+}
