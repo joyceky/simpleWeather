@@ -1,8 +1,9 @@
 $(document).ready(function () {  
     getCurrentAddress(); 
+
 });
     var currentAddress = {};
-    var currentWeather = {};
+    var Weather = {};
     var weatherUrl = "https://api.forecast.io/forecast/b608b777eb9877f79b43bddfa74f5d86/";
 
 function getCurrentAddress() {
@@ -14,6 +15,8 @@ function getCurrentAddress() {
     request.done(function (data) {
         currentAddress = data;
         weatherUrl = weatherUrl + currentAddress.lat + "," + currentAddress.lon;
+        
+        currentLocation.innerHTML = currentAddress.city;
 
         getCurrentWeather(weatherUrl);
     });
@@ -30,9 +33,9 @@ function getCurrentWeather(url) {
     });
 
     request.done(function (data) {
-        currentWeather = data;
-        $("#temp").html(currentWeather.currently.apparentTemperature);
-        $("#chancePrec").html(currentWeather.currently.precipProbability);
+        Weather = data;
+        currentTemp.innerHTML = Weather.currently.apparentTemperature;
+
     });
 
     request.fail(function (jqXHR, textStatus) {
